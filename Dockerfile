@@ -6,7 +6,7 @@ COPY /HelloArm64/HelloArm64.csproj ./
 RUN dotnet restore
 
 # Copy everything else and build
-COPY ../HelloArm64/*.cs ./
+COPY /HelloArm64/*.cs ./
 RUN dotnet publish -c Release -o out
 
 # Build runtime image
