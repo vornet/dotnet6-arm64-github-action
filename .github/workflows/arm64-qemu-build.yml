@@ -1,0 +1,7 @@
+name: ARM64 Build via QEMU
+on: [push]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - run: docker run --rm --privileged multiarch/qemu-user-static --reset -p yes
